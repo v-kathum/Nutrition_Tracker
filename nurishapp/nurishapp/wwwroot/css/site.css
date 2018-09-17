@@ -1,35 +1,177 @@
 ﻿body {
     padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+/*MODAL*/
+
+h3 {
+    font-size: 2em;
+    font-weight: bold;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+.modal-content {
+    border-radius: 20px;
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
+.modal-body {
+    background: white;
 }
 
-/* QR code generator */
-#qrCode {
-    margin: 15px;
+.modal-footer {
+    background: white;
 }
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
+.form-group {
+    margin: 5%;
+}
+
+/*.btn.btn-custom {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    height: 45px;
+    text-align: center;
+    background: coral;
+    box-shadow: 0 4px 10px 0 rgb(128, 128, 128);
+    border-radius: 40px;
+}*/
+
+.btn-custom {
+    /*flex: 1 1 auto;*/
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 45px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    box-shadow: 0 4px 10px 0 rgb(128, 128, 128);
+    border-radius: 40px;
+    background-image: linear-gradient(to right, #FF8008 0%, #F09819 51%, #FF8008 100%);
+}
+
+    .btn-custom:hover {
+        background-position: bottom right; /* change the direction of the change here */
+        color: white;
     }
+
+    
+/*Potential button colors in here, otherwise this does nothing*/
+.btn-grad {
+    background-image: linear-gradient(to right, #DE6262 0%, #FFB88C 51%, #DE6262 100%)
+}
+
+
+
+/*MODAL*/
+
+h3 {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#login {
+}
+
+.modal-content {
+    border-radius: 20px;
+}
+
+.modal-body {
+    background: white;
+}
+
+.modal-footer {
+    background: white;
+}
+
+.form-group {
+    margin: 5%;
+}
+
+/*.btn.btn-custom {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+    height: 45px;
+    text-align: center;
+    background: coral;
+    box-shadow: 0 4px 10px 0 rgb(128, 128, 128);
+    border-radius: 40px;
+}*/
+
+.btn-custom {
+    /*flex: 1 1 auto;*/
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 45px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    box-shadow: 0 4px 10px 0 rgb(128, 128, 128);
+    border-radius: 40px;
+    background-image: linear-gradient(to right, #FF8008 0%, #F09819 51%, #FF8008 100%);
+}
+
+    .btn-custom:hover {
+        background-position: bottom right; /* change the direction of the change here */
+        color: white;
+    }
+
+    
+/*Potential button colors in here, otherwise this does nothing*/
+.btn-grad {
+    background-image: linear-gradient(to right, #DE6262 0%, #FFB88C 51%, #DE6262 100%)
+}
+
+  
+
+
+/*Splash Load Screen*/
+.hi {
+    margin: 0;
+    padding: 25% 0;
+    /*color: white;*/
+    color: #ff6a00;
+    font-size: 6em;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#loader {
+    position: fixed;
+    /*background: -webkit-linear-gradient(bottom left, #ffa97f, coral);*/
+    /*background: -webkit-linear-gradient(bottom left, #FF8008 20%, #F09819 50%, #FF8008 90%);*/
+    background: -webkit-linear-gradient(bottom left, #fff 20%, #fff 50%, #fff 90%); 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 1;
 }

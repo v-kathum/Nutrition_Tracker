@@ -23,4 +23,20 @@ else
         <li><a asp-area="" asp-controller="Account" asp-action="Register">Register</a></li>
         <li><a asp-area="" asp-controller="Account" asp-action="Login">Log in</a></li>
     </ul>
+
+    <ul class="navbar-nav navbar-right">
+
+        <li>
+            <button onclick="document.getElementById('login').style.display='block'" id="logout-btn" class=" btn-link navbar-btn login-nav" data-toggle="modal" data-target="#loginForm">LOGIN</button>
+        </li>
+
+    </ul>
+    <ul class="navbar-nav navbar-right">
+
+        <li>
+            <button onclick="document.getElementById('register').style.display='block'" id="logout-btn" class=" btn-link navbar-btn login-nav" data-toggle="modal" data-target="#registerForm">REGISTER</button>
+        </li>
+
+    </ul>
+
 }

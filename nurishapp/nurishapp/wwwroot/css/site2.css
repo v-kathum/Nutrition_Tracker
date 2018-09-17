@@ -1,0 +1,157 @@
+﻿@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+.body {
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 50px;
+    margin-top: 70px;
+}
+
+/*NAV ITEMS*/
+
+nav {
+    width: 100vw;
+    background: -webkit-linear-gradient(bottom, #ffa97f, coral);
+    height: 70px;
+    -webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    -moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+}
+
+a.navbar-custom {
+    color: floralwhite;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+    a.navbar-custom:hover {
+        color: white;
+    }
+
+
+.navbar-collapse {
+    display: inline-block;
+    text-align: center;
+    float: none;
+}
+
+
+#account {
+    padding-right: 50px;
+    padding-top: 20px;
+}
+
+
+#navIcons {
+    font-size: 2.5em;
+    color: floralwhite;
+}
+
+    #navIcons:hover {
+        color: white;
+    }
+
+#logout-btn {
+    color: floralwhite !important;
+}
+
+    #logout-btn:hover {
+        color: white !important;
+    }
+
+/*Footer*/
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background-color: #a4a4a4;
+}
+
+.footer-brand {
+    text-align: center;
+    color: floralwhite;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+}
+
+/*nav logo*/
+.navbar-custom {
+    color: floralwhite;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+
+
+.btn-lg {
+    z-index: 1;
+    background-color: rgba(46, 46, 46, 0.5);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+    .btn-lg:hover {
+        background-color: coral;
+    }
+
+
+
+h3 {
+    float: left;
+}
+
+
+
+#vc-icons {
+    font-size: 2em;
+    float: right;
+    margin-top: 3%;
+    background: linear-gradient(to right, rgb(148, 219, 152) 0%, rgb(176, 232, 167) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#vc-icons-recent {
+    font-size: 2em;
+    float: right;
+    margin-top: 3%;
+    background: linear-gradient(to right, rgb(148, 219, 152) 0%, rgb(176, 232, 167) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#vc-icons-water {
+    font-size: 2em;
+    float: right;
+    margin-top: 3%;
+    background: linear-gradient(to right, rgb(148, 219, 152) 0%, rgb(176, 232, 167) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.side-custom {
+    clear: both;
+}
+
+
+
+#person-icon {
+    color: floralwhite !important;
+}
+
+    #person-icon:hover {
+        color: coral !important;
+    }
+
+
+
+p {
+    clear: both;
+}
+
+
+
+.navbar-nav {
+    float: right;
+}

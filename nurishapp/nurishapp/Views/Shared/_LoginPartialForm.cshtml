@@ -1,0 +1,48 @@
+﻿@model LoginViewModel
+@inject SignInManager<ApplicationUser> SignInManager
+
+<div id="loginForm" class="modal fade">
+
+    <div class="modal-dialog">
+        <div class="modal-content container-fluid">
+
+            <div class="modal-body form-elegant">
+                <h3 class="modal-title text-center ">Sign In</h3>
+
+                <form asp-controller="Account"
+                      asp-action="Login"
+                      asp-route-returnurl="/User/Index"
+                      method="post"
+                      class="form-horizontal"
+                      role="form"
+                      id="login">
+
+                    <div asp-validation-summary="All" class="text-danger"></div>
+
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label col-form-label"></label>
+                        <input asp-for="Email" class="form-control form-control-lg" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label col-form-label"></label>
+                        <input asp-for="Password" class="form-control form-control-lg" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Login" class="btn btn-custom" />
+                    </div>
+
+                    <div class="modal-footer form-elegant checkbox">
+                        <label asp-for="RememberMe">
+                            <input asp-for="RememberMe" />
+                            <strong>@Html.DisplayNameFor(m => m.RememberMe)</strong>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

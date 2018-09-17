@@ -1,0 +1,49 @@
+﻿@model RegisterViewModel
+@inject SignInManager<ApplicationUser> SignInManager
+
+<div id="registerForm" class="modal fade">
+
+    <div class="modal-dialog">
+        <div class="modal-content container-fluid">
+
+            <div class="modal-body form-elegant">
+                <h3 class="modal-title text-center ">Register</h3>
+
+                <form asp-controller="Account"
+                      asp-action="Register"
+                      asp-route-returnurl="/User/Index"
+                      method="post"
+                      class="form-horizontal"
+                      role="form"
+                      id="register">
+
+                    <div asp-validation-summary="All" class="text-danger"></div>
+
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label col-form-label"></label>
+                        <input asp-for="Email" class="form-control form-control-lg" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label col-form-label"></label>
+                        <input asp-for="Password" class="form-control form-control-lg" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="ConfirmPassword" class="control-label col-form-label"></label>
+                        <input asp-for="ConfirmPassword" class="form-control form-control-lg" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Register" class="btn btn-custom" />
+                    </div>
+
+                
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
