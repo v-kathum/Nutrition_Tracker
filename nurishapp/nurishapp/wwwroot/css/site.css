@@ -3,6 +3,219 @@
     padding-bottom: 50px;
 }
 
+
+button {
+    background: none;
+}
+
+.logout-form {
+    color: floralwhite;
+    text-decoration: none;
+}
+
+.navbar {
+    z-index: 1;
+}
+
+.navbar-nav {
+    margin: .5%;
+}
+
+li {
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+}
+
+/*nav logo*/
+a.navbar-brand {
+    color: coral;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 3.5em;
+    padding: 20px;
+    z-index: 1;
+}
+
+    a.navbar-brand:hover {
+        color: coral;
+    }
+
+/*nav login*/
+.login-nav {
+    color: white;
+    font-size: 1.25em;
+    background: none;
+}
+
+    .login-nav:hover {
+        color: coral;
+        text-decoration: none;
+    }
+
+.top-image {
+    position: absolute;
+    top: 0;
+    bottom: 0%;
+    right: 0;
+    left: 0;
+    background-image: url('/images/nurish_main.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000000;
+}
+
+
+.top-image2 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.display-4 {
+    margin-top: 13%;
+    text-align: center;
+    color: white;
+}
+
+.lead {
+    text-align: center;
+    color: white;
+}
+
+.btn-lg {
+    z-index: 1;
+    border: 2px solid coral;
+    border-radius: 20px;
+    color: white;
+    width: 15%;
+    font-weight: bold;
+    text-align: center;
+}
+
+    .btn-lg:hover {
+        background-image: linear-gradient(to right, #FF8008 0%, #F09819 51%, #FF8008 100%);
+        //background: coral;
+        color: white;
+    }
+
+
+.info-div {
+    margin-top: 30%;
+    width: 80%;
+    text-align: center;
+    color: dimgrey;
+}
+
+.info-div2 {
+    margin-top: 5%;
+    width: 80%;
+    text-align: center;
+    color: dimgrey;
+}
+
+
+#firsth3 {
+    text-align: center;
+}
+
+h3 {
+    text-align: left;
+    font-weight: bold;
+}
+
+#person-icon {
+    color: floralwhite !important;
+}
+
+    #person-icon:hover {
+        color: coral !important;
+    }
+
+#logout-btn {
+    color: floralwhite !important;
+}
+
+    #logout-btn:hover {
+        color: coral !important;
+    }
+
+p {
+    font-size: 1.5em;
+}
+
+.push {
+    height: 50px;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #a4a4a4;
+}
+
+.navbar-nav {
+    float: right;
+}
+
+.location {
+    color: floralwhite;
+    margin-top: 3%;
+    margin-left: 3%;
+}
+
+html {
+    background-color: rgb(245, 245, 245);
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Icons*/
+
+.expand {
+    z-index: 20;
+    font-size: 36px;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 36px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    margin-top: 50%;
+    margin-left: 50%;
+}
+
+.angular {
+    margin-top: 5%;
+}
+
+/*navbar container*/
+.nav-custom {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+
+/*Hero Banner*/
+h1.display-4 {
+    margin-top: 20%;
+}
+
 /*MODAL*/
 
 h3 {
@@ -152,10 +365,10 @@ h3 {
 /*Splash Load Screen*/
 .hi {
     margin: 0;
-    padding: 25% 0;
+    padding: 22% 0;
     /*color: white;*/
     color: #ff6a00;
-    font-size: 6em;
+    font-size: 7em;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
 }
@@ -173,5 +386,5 @@ h3 {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    z-index: 1;
+    z-index: 10;
 }

@@ -1,18 +1,112 @@
-﻿@{
+﻿
+@inject SignInManager<ApplicationUser> SignInManager
+@*@inject UserManager<ApplicationUser> UserManager*@
+@*@using Microsoft.AspNetCore.Identity*@
+
+
+@{
     ViewData["Title"] = "Home Page";
     Layout = "_LayoutHome.cshtml";
 }
 
-@* Login Modal *@
-<div id="login" class="modal">
-    @Html.Partial("_LoginPartialForm")
-</div>
+<!Doctypehtml>
+    <html ng-app="helloWorldApp">
+    <head>
+        <title>
+            nurish | health
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+              rel="stylesheet">
+    </head>
+    <body ng-controller="firstController">
 
-<div id="register" class="modal">
-    @Html.Partial("_RegisterPartialForm")
-</div>
+        @* Login Modal *@
+        <div id="login" class="modal">
+            @Html.Partial("_LoginPartialForm")
+        </div>
 
-@* Splash Loader *@
-<div id="loader">
-    <h1 class="hi">nurish</h1>
-</div>
+        <div id="register" class="modal">
+            @Html.Partial("_RegisterPartialForm")
+        </div>
+
+        @* Splash Loader *@
+        <div id="loader">
+            <h1 class="hi">nurish</h1>
+        </div>
+
+
+        <nav class="navbar navbar-sticky-top">
+            <div class="container-fluid nav-custom">
+                <div class="navbar-header">
+                    <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">nurish</a>
+                </div>
+
+                <div class="navbar-custom">
+                    @await Html.PartialAsync("_LoginPartial")
+                </div>
+            </div>
+        </nav>
+        @if (SignInManager.IsSignedIn(User))
+        {
+        <section class="hero">
+            <div class="top-image text-center">
+                <h1 class="display-4">Eat Well, Feel Better</h1>
+                <h2 class="lead">Nutrition first health app focused on guiding you to a better self.</h2>
+                <a asp-area="" asp-controller="User" asp-action="Index" class="btn btn-lg">Go to Account</a>
+
+            </div>
+            <div class="expand">
+                <i class="material-icons md-36">expand_more</i>
+            </div>
+        </section>
+        }
+        else
+        {
+            @*login main image w/ text*@
+            <section>
+                <div class="top-image text-center">
+                    <h1 class="display-4">Eat Well, Feel Better</h1>
+                    <p class="lead">Nutrition first health app focused on guiding you to a better self.</p>
+
+                    @*<a asp-area="" asp-controller="Account" asp-action="Register" class="btn btn-lg">Sign Up!</a>*@
+                    <button onclick="document.getElementById('register').style.display='block'" class="btn-lg" data-toggle="modal" data-target="#registerForm">Sign Up!</button>
+
+
+                </div>
+                <div class="expand">
+                    <i class="material-icons md-36">expand_more</i>
+                </div>
+            </section>
+        }
+
+       
+
+        @* Angular *@
+        <div class="container angular">
+            <h2>{{'Hello from AngularJS'}}</h2>
+            <pre>The Current Date: {{currentDate}}</pre>
+        </div>
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script type="text/javascript">
+
+            var helloWorldApp = angular.module('helloWorldApp', []);
+
+            helloWorldApp.constant('myConfig', { applicationName: Date() });
+
+            helloWorldApp.controller('firstController', [
+                '$scope',
+                'myConfig',
+                function ($scope, myConfig) {
+                    $scope.currentDate = new Date();
+                }
+            ]);
+        </script>
+    </body>
+</html>
+</!Doctypehtml>
+

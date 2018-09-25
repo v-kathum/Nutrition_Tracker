@@ -58,9 +58,10 @@ a.navbar-custom {
         color: white !important;
     }
 
+
+
 /*Footer*/
 footer {
-    position: fixed;
     bottom: 0;
     width: 100vw;
     background-color: #a4a4a4;
