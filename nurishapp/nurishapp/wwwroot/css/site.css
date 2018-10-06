@@ -1,6 +1,18 @@
-﻿body {
+﻿html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
     padding-top: 50px;
-    padding-bottom: 50px;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -25,6 +37,7 @@ li {
     list-style: none;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
+    padding-top: 10px;
 }
 
 /*nav logo*/
@@ -56,28 +69,23 @@ a.navbar-brand {
 .top-image {
     position: absolute;
     top: 0;
-    bottom: 0%;
+    bottom: 50%;
     right: 0;
     left: 0;
-    background-image: url('/images/nurish_main.png');
+    background: linear-gradient( rgba(20,20,20, .3), rgba(20,20,20, .4)), url('/images/nurish_main.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #000000;
 }
 
-
-.top-image2 {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+img {
+    padding: 0;
+    //display: block;
+    //margin: 0 auto;
     width: 100%;
-}
-
-.display-4 {
-    margin-top: 13%;
-    text-align: center;
-    color: white;
+    border: 1px solid;
+    border-color: lightgray;
 }
 
 .lead {
@@ -93,28 +101,13 @@ a.navbar-brand {
     width: 15%;
     font-weight: bold;
     text-align: center;
+    transition: all .1s ease-in-out;
 }
 
     .btn-lg:hover {
-        background-image: linear-gradient(to right, #FF8008 0%, #F09819 51%, #FF8008 100%);
-        //background: coral;
-        color: white;
+        background: coral;
+        transform: scale(1.1);
     }
-
-
-.info-div {
-    margin-top: 30%;
-    width: 80%;
-    text-align: center;
-    color: dimgrey;
-}
-
-.info-div2 {
-    margin-top: 5%;
-    width: 80%;
-    text-align: center;
-    color: dimgrey;
-}
 
 
 #firsth3 {
@@ -132,30 +125,45 @@ h3 {
 
     #person-icon:hover {
         color: coral !important;
+
     }
 
-#logout-btn {
-    color: floralwhite !important;
+.partial {
+    transition: all .1s ease-in-out;
 }
 
-    #logout-btn:hover {
+    .partial:hover {
+        transform: scale(1.1);
+    }
+
+#partial {
+    color: floralwhite !important;
+    
+   
+}
+
+    #partial:hover {
         color: coral !important;
     }
 
+.info_div {
+    margin-bottom: 8%;
+}
+h1 {
+    font-size: 3em;
+    color: gray;
+    font-weight: bold;
+}
+
 p {
-    font-size: 1.5em;
+    font-size: 2em;
+    color: gray;
 }
 
 .push {
     height: 50px;
 }
 
-footer {
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    background-color: #a4a4a4;
-}
 
 .navbar-nav {
     float: right;
@@ -167,45 +175,14 @@ footer {
     margin-left: 3%;
 }
 
-html {
-    background-color: rgb(245, 245, 245);
-}
-
-.body {
-    margin: 0;
-    padding: 0;
-}
-
-
-/*Icons*/
-
-.expand {
-    z-index: 20;
-    font-size: 36px;
-}
-
-.material-icons {
-    font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 36px; /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-    margin-top: 50%;
-    margin-left: 50%;
-}
 
 .angular {
-    margin-top: 5%;
+    margin-top: 15%;
 }
 
 /*navbar container*/
 .nav-custom {
+    margin-top: 3%;
     margin-left: 2%;
     margin-right: 2%;
 }
@@ -213,8 +190,46 @@ html {
 
 /*Hero Banner*/
 h1.display-4 {
-    margin-top: 20%;
+    margin-top: 10%;
+    font-size: 3.5em;
+    color: white;
+
 }
+
+#checklist {
+    margin-top: 25%;
+    margin-bottom: 3%;
+    color: dimgrey;
+
+}
+
+
+
+#face_icon {
+    padding-top: 5px;
+    color: coral;
+    font-size: 4em;
+}
+
+#timeline_icon {
+    padding-top: 5px;
+    color: coral;
+    font-size: 4em;
+}
+
+#drink_icon {
+    padding-top: 5px;
+    color: coral;
+    font-size: 4em;
+}
+
+
+.material-icons.md-48 {
+    display: block;
+    font-size: 48px;
+    margin: 0 auto;   
+}
+
 
 /*MODAL*/
 
@@ -355,18 +370,46 @@ h3 {
 
     
 /*Potential button colors in here, otherwise this does nothing*/
-.btn-grad {
+/*.btn-grad {
     background-image: linear-gradient(to right, #DE6262 0%, #FFB88C 51%, #DE6262 100%)
+}*/
+
+
+/*Footer*/
+.footer {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 4.5rem;
+    background-color: #efefef;
+    text-align: center;
 }
 
+#top_footer {
+    color: black;
+    padding: 1.25rem;
+    background-color: #e9e9e9;
+}
+
+.footer-brand {
+    text-align: center;
+    color: dimgray;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+}
+
+#footer_icon {
+    color: dimgray;
+    font-size: 2em;
+}
   
 
 
 /*Splash Load Screen*/
 .hi {
     margin: 0;
-    padding: 22% 0;
-    /*color: white;*/
+    padding-top: 22%;
     color: #ff6a00;
     font-size: 7em;
     font-weight: bold;
@@ -387,4 +430,52 @@ h3 {
     padding: 0;
     overflow: hidden;
     z-index: 10;
+}
+
+.spinner {
+    margin: 65px auto 0;
+    width: 200px;
+    text-align: center;
+}
+
+    .spinner > div {
+        width: 18px;
+        height: 18px;
+        background-color: coral;
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+        animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    }
+
+    .spinner .bounce1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+    }
+
+    .spinner .bounce2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+    }
+
+@-webkit-keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0)
+    }
+
+    40% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bouncedelay {
+    0%, 80%, 100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    40% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
 }

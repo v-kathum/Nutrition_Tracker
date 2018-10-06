@@ -1,7 +1,7 @@
 ﻿
 // app load screen
 $(window).load(function () {
-    $("#loader").delay(2000).fadeOut(500);
+    $("#loader").delay(2000).fadeOut(800);
 });
 
 // Get the modal

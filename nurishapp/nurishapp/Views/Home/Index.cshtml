@@ -18,6 +18,7 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
               rel="stylesheet">
+       
     </head>
     <body ng-controller="firstController">
 
@@ -33,7 +34,16 @@
         @* Splash Loader *@
         <div id="loader">
             <h1 class="hi">nurish</h1>
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+                <div class="bounce4"></div>
+            </div>
         </div>
+
+
 
 
         <nav class="navbar navbar-sticky-top">
@@ -49,17 +59,15 @@
         </nav>
         @if (SignInManager.IsSignedIn(User))
         {
-        <section class="hero">
-            <div class="top-image text-center">
-                <h1 class="display-4">Eat Well, Feel Better</h1>
-                <h2 class="lead">Nutrition first health app focused on guiding you to a better self.</h2>
-                <a asp-area="" asp-controller="User" asp-action="Index" class="btn btn-lg">Go to Account</a>
+            <section class="hero">
+                <div class="top-image text-center">
+                    <h1 class="display-4">Eat Well, Feel Better</h1>
+                    <h2 class="lead">Nutrition first health app focused on guiding you to a better self.</h2>
+                    <a asp-area="" asp-controller="User" asp-action="Index" class="btn btn-lg">Go to Account</a>
+                </div>
 
-            </div>
-            <div class="expand">
-                <i class="material-icons md-36">expand_more</i>
-            </div>
-        </section>
+            </section>
+
         }
         else
         {
@@ -74,22 +82,57 @@
 
 
                 </div>
-                <div class="expand">
-                    <i class="material-icons md-36">expand_more</i>
+
+                <div class="container" id="checklist">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <i class="material-icons md-48 text-center" id="face_icon">face</i>
+                            <h2 class="text-center">Lose Weight</h2>
+                        </div>
+                        <div class="col-md-4">
+                            <i class="material-icons md-48 text-center" id="timeline_icon">timeline</i>
+                            <h2 class="text-center">Track Calories</h2>
+                        </div>
+                        <div class="col-md-4">
+                            <i class="material-icons md-48 text-center" id="drink_icon">local_drink</i>
+                            <h2 class="text-center">Hydrate</h2>
+                        </div>
+                    </div>
+                <hr />
                 </div>
             </section>
-        }
+            <section>
+                <div class="container info_div">
+                    <div class="row">
+                        <div class="col-lg-6 text-center">
+                            <h1>Eat Better</h1>
+                            <p> Look good, feel good, play good. . . Track your daily progress so you can feed your body the correct way and eat your way to a healthier and happier self</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="https://images.pexels.com/photos/936611/pexels-photo-936611.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Alternate Text" />
+                        </div>
+                    </div>
+                </div>
+                <div class="container info_div">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <img src="https://images.pexels.com/photos/320007/pexels-photo-320007.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Alternate Text" />
+                        </div>
+                        <div class="col-lg-6 text-center">
+                            <h1>Feel Better</h1>
+                            <p>The best way to lose weight is by keeping a food journal. Track your calories and your water intake to make sure you're getting enough nutrients in your body and hitting your weight loss goals</p>
+                        </div>
+                    </div>
+                </div>
 
+            </section>
        
-
+        }
         @* Angular *@
-        <div class="container angular">
+        @*<div class="container angular">
             <h2>{{'Hello from AngularJS'}}</h2>
             <pre>The Current Date: {{currentDate}}</pre>
         </div>
-
-
-
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
         <script type="text/javascript">
@@ -105,7 +148,7 @@
                     $scope.currentDate = new Date();
                 }
             ]);
-        </script>
+        </script>*@
     </body>
 </html>
 </!Doctypehtml>
