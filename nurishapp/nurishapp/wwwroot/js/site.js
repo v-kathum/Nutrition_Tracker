@@ -1,7 +1,7 @@
 ﻿
 // app load screen
 $(window).load(function () {
-    $("#loader").delay(1900).fadeOut(500);
+    $("#loader").delay(2000).fadeOut(800);
 });
 
 // Get the modal
@@ -23,3 +23,6 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
+
+
+
